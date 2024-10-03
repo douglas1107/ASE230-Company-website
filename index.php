@@ -1,14 +1,28 @@
+<?php
+include 'lib/read_csv.php';
+include 'lib/read_json.php';
+include 'lib/read_plain_text.php';
+
+
+
+$awards = readAwards('data/awards.csv');
+$team = readTeam ('data/team.csv');
+
+?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Hiric</title>
+    <title>Orion Aerospace Dynamics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
     <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
-    <meta content="Themesbrand" name="author" />
+    <meta content="Orion" name="author" />
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" />
 
@@ -31,7 +45,7 @@
         <div class="container">
             <!-- LOGO -->
             <a class="navbar-brand logo text-uppercase" href="index.html">
-                <i class="mdi mdi-alien"></i>Hiric
+                <i class="mdi mdi-alien"></i>Orion Aerospace
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
@@ -53,23 +67,13 @@
                     <li class="nav-item">
                         <a data-scroll href="#about" class="nav-link">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a data-scroll href="#pricing" class="nav-link">Pricing</a>
                     </li>
-                    <li class="nav-item">
-                        <a data-scroll href="#blog" class="nav-link">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a data-scroll href="#contact" class="nav-link">Contact</a>
-                    </li>
-
                 </ul>
                 <div class="nav-button ms-auto">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <button type="button"
-                                class="btn btn-primary navbar-btn btn-rounded waves-effect waves-light">Try it
-                                Free</button>
+                                class="btn btn-primary navbar-btn btn-rounded waves-effect waves-light">Contact Us</button>
                         </li>
                     </ul>
                 </div>
@@ -84,10 +88,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-white text-center">
-                    <h4 class="home-small-title">Awesome Design</h4>
-                    <h1 class="home-title">We love make things amazing and simple</h1>
-                    <p class="pt-3 home-desc mx-auto">Maecenas class semper class semper sollicitudin lectus lorem
-                        iaculis imperdiet aliquam vehicula tempor auctor curabitur pede aenean ornare.</p>
+                    <h4 class="home-small-title">The Sky is Not the Limit</h4>
+                    <h1 class="home-title">Orion Aerospace Dynamics</h1>
+                    <p class="pt-3 home-desc mx-auto">Pushing the boundaries of human reach, making the vast expanse of space a familiar terrain,
+                         and ensuring Earth's skies are traveled sustainably.</p>
                     <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
                             href="javascript: void(0);" class="play-btn video-play-icon"><i
                                 class="mdi mdi-play text-center"></i></a></p>
@@ -149,13 +153,14 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
-                        <h3>A digital web design studio creating modern & engaging online</h3>
-                        <p class="text-muted web-desc">Separated they live in Bookmarksgrove right at the coast of the
-                            Semantics, a large language ocean.</p>
+                        <h3>About Orion Aerospace Dynamicse</h3>
+                        <p class="text-muted web-desc">Founded in 2021, Orion Aerospace Dynamics has quickly emerged as a leader in both space exploration and aviation technology. With innovative
+                             products like the Galactic Cruiser™ and SkySailor Drones™, Orion is redefining what’s possible in the aerospace industry.</p>
+                        <p class="text-muted">Our mission: "To push the boundaries of human reach, making the vast expanse of space a familiar terrain and ensuring Earth's skies are traveled sustainably."</p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
-                            <li class="">We put a lot of effort in design.</li>
-                            <li class="">The most important ingredient of successful website.</li>
-                            <li class="">Submit Your Orgnization.</li>
+                            <li class="">Galactic Cruiser™ for deep space exploration.</li>
+                            <li class="">SkySailor Drones™ for sustainable aerial surveillance.</li>
+                            <li class="">Nebula Stations™ for modular space habitats.</li>
                         </ul>
                         <a href="#" class="btn btn-primary mt-4 waves-effect waves-light">Learn More <i
                                 class="mdi mdi-arrow-right"></i></a>
@@ -178,9 +183,8 @@
                 <div class="col-lg-8 offset-lg-2">
                     <h1 class="section-title text-center">Our Services</h1>
                     <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center pt-4 font-secondary">We craft digital, graphic and
-                        dimensional thinking, to create category leading brand experiences that have meaning and add a
-                        value for our clients.</p>
+                    <p class="section-subtitle text-muted text-center pt-4 font-secondary">Orion Aerospace Dynamics, headquartered in Denver, Colorado,
+                         is at the forefront of aerospace innovation, offering products that push the boundaries of space exploration, sustainable aviation, and immersive aerospace training.</p>
                 </div>
             </div>
             <div class="row mt-5">
@@ -189,9 +193,8 @@
                         <div class="d-flex">
                             <i class="pe-7s-diamond text-primary"></i>
                             <div class="ms-4">
-                                <h4>Digital Design</h4>
-                                <p class="pt-2 text-muted">Some quick example text to build on the card title and make
-                                    up the bulk of the card's content. Moltin gives platform.</p>
+                                <h4>Galactic Cruiser™</h4>
+                                <p class="pt-2 text-muted">A spacecraft designed for deep space exploration, featuring Stellar Drive Propulsion for high-speed travel and Holodeck Entertainment for immersive, VR-based experiences.</p>
                             </div>
                         </div>
                     </div>
@@ -201,9 +204,8 @@
                         <div class="d-flex">
                             <i class="pe-7s-display2 text-primary"></i>
                             <div class="ms-4">
-                                <h4>Unlimited Colors</h4>
-                                <p class="pt-2 text-muted">Credibly brand standards compliant users without extensible
-                                    services. Anibh euismod tincidunt laoreet Ipsum passage.</p>
+                                <h4>SkySailor Drones™</h4>
+                                <p class="pt-2 text-muted">Environmentally-friendly drones powered by solar and wind energy, equipped with Eco-Cam Tech for ecosystem monitoring and Infinite Flight Mode for extended airborne time.</p>
                             </div>
                         </div>
                     </div>
@@ -213,9 +215,8 @@
                         <div class="d-flex">
                             <i class="pe-7s-piggy text-primary"></i>
                             <div class="ms-4">
-                                <h4>Strategy Solutions</h4>
-                                <p class="pt-2 text-muted">Separated they live in Bookmarksgrove right at the coast of
-                                    the Semantics, and large language ocean neary regelia.</p>
+                                <h4>Nebula Stations™</h4>
+                                <p class="pt-2 text-muted">Modular space habitats designed for research and tourism, with Bio-Dome Agriculture for fresh produce growth in space and Gravity Pods for variable gravity simulation.</p>
                             </div>
                         </div>
                     </div>
@@ -227,72 +228,9 @@
                         <div class="d-flex">
                             <i class="pe-7s-science text-primary"></i>
                             <div class="ms-4">
-                                <h4>Awesome Support</h4>
-                                <p class="pt-2 text-muted">It is a paradisematic country, in which roasted parts of
-                                    sentences fly into your mouth leave for the far World.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-news-paper text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Truly Multipurpose</h4>
-                                <p class="pt-2 text-muted">Even the all-powerful Pointing has no control about the blind
-                                    texts it is an almost unorthographic.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-plane text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Easy to customize</h4>
-                                <p class="pt-2 text-muted">Question Marks and devious Semikoli, but the Little Blind
-                                    Text didn’t listen. She packed her seven versalia.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-arc text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Pixel Perfect Design</h4>
-                                <p class="pt-2 text-muted">There are many variations of passages of Lorem Ipsum
-                                    available, but the majority have suffered alteration.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-tools text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Perfect Toolbox</h4>
-                                <p class="pt-2 text-muted">Hampden-Sydney College in Virginia, looked up one of the more
-                                    obscure Latin words, consectetur.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-timer text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Awesome Design</h4>
-                                <p class="pt-2 text-muted">All the Lorem Ipsum generators on the Internet tend to repeat
-                                    predefined chunks as necessary.</p>
+                                <h4>AeroAcademy™</h4>
+                                <p class="pt-2 text-muted">An immersive training institution offering aerospace engineering, astronaut training, and space tourism programs, including Virtual Spacewalks and Intergalactic Culture Modules.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -302,21 +240,22 @@
     </section>
     <!--START SERVICES-->
 
-    <!--START WEBSITE-DESCRIPTION-->
+    <!--START AWARDS-->
     <section class="section bg-web-desc">
         <div class="bg-overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="text-white">Build your dream website today</h2>
-                    <p class="pt-3 home-desc mx-auto">But nothing the copy said could convince her and so it didn’t take
-                        long until a few insidious Copy Writers ambushed her.</p>
-                    <a href="#" class="btn btn-light mt-5 waves-effect waves-light">View Plan & Pricing</a>
+                    <h2 class="text-white">Awards</h2>
+                        <?php foreach ($awards as $award): ?>
+                            <p class="pt-3 home-desc mx-auto"><li><?php echo htmlspecialchars($award['Year'] . ': ' . $award['Award']); ?></li></p>
+                        <?php endforeach; ?>
+                    <a href="#" class="btn btn-light mt-5 waves-effect waves-light">Discover Our Technologies</a>
                 </div>
             </div>
         </div>
     </section>
-    <!--END WEBSITE-DESCRIPTION-->
+    <!--END AWARDS-->
 
     <!--START ABOUT-US-->
     <section class="section" id="about">
@@ -324,64 +263,26 @@
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
                     <div class="about-title mx-auto text-center">
-                        <h2>A Digital web studio creating stunning &amp; Engaging online
-                            Experiences </h2>
-                        <p class="text-muted pt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                            commodo ligula eget dolor.
-                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                            ridiculus mus donec various versions have evolved quam felis.</p>
+                        <h2>About Us</h2>
+                        <p class="text-muted pt-4">Founded in 2021, Orion Aerospace Dynamics is redefining aerospace technology. From deep space exploration vehicles to eco-friendly drones and modular space habitats, we push the boundaries of what’s possible.</p>
                     </div>
                 </div>
             </div>
             <div class="row mt-5">
+            <?php foreach ($team as $member): ?>
                 <div class="col-lg-3 col-sm-6">
                     <div class="team-box text-center">
                         <div class="team-wrapper">
                             <div class="team-member">
-                                <img alt="" src="images/team/img-1.jpg" class="img-fluid rounded">
+                                <img alt="<?php echo htmlspecialchars($member['name']); ?>" src="<?php echo htmlspecialchars($member['image']); ?>" class="img-fluid rounded">
                             </div>
                         </div>
-                        <h4 class="team-name">Frank Johnson</h4>
-                        <p class="text-uppercase team-designation">CEO</p>
+                        <h4 class="team-name"><?php echo htmlspecialchars($member['name']); ?></h4>
+                        <p class="text-uppercase team-designation"><?php echo htmlspecialchars($member['title']); ?></p>
+                        <p class="text-muted"><?php echo htmlspecialchars($member['bio']); ?></p>
                     </div>
                 </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-2.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Elaine Stclair</h4>
-                        <p class="text-uppercase team-designation">Designer</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-3.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Wanda Arthur</h4>
-                        <p class="text-uppercase team-designation">Developer</p>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="team-box text-center">
-                        <div class="team-wrapper">
-                            <div class="team-member">
-                                <img alt="" src="images/team/img-4.jpg" class="img-fluid rounded">
-                            </div>
-                        </div>
-                        <h4 class="team-name">Joshua Stemple</h4>
-                        <p class="text-uppercase team-designation">Manager</p>
-                    </div>
-                </div>
-
+            <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -392,27 +293,24 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
-                    <h1 class="section-title text-center">Our Pricing</h1>
+                    <h1 class="section-title text-center">Our Solutions</h1>
                     <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle font-secondary text-muted text-center pt-4">Call to action pricing table
-                        is really crucial to your for your business website. Make your bids stand-out with amazing
-                        options.</p>
+                    <p class="section-subtitle font-secondary text-muted text-center pt-4">Explore our range of aerospace solutions tailored for both private and commercial sectors.</p>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-4">
                     <div class="text-center pricing-box">
-                        <h4 class="text-uppercase">Economy</h4>
-                        <h1>$9.90</h1>
-                        <h6 class="text-uppercase text-muted">Billing Per Month</h6>
+                        <h4 class="text-uppercase">Galactic Cruiser™</h4>
+                        <h1>$500M+0</h1>
+                        <h6 class="text-uppercase text-muted">Per Mission</h6>
                         <div class="plan-features mt-5">
-                            <p>Bandwidth: <b class="text-primary">1GB</b></p>
-                            <p>Onlinespace: <b class="text-primary">50MB</b></p>
-                            <p>Support: <b class="text-primary">No</b></p>
-                            <p><b class="text-primary">1</b> Domain</p>
-                            <p><b class="text-primary">No</b> Hidden Fees</p>
+                            <p>Propulsion: <b class="text-primary">Stellar Drive</b></p>
+                            <p>Life Support: <b class="text-primary">Advanced</b></p>
+                            <p>Entertainment: <b class="text-primary">Holodeck VR</b></p>
+                            <p><b class="text-primary">Interplanetary Travel</b></p>
                         </div>
-                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Join Now</a>
+                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Book a Mission</a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -528,24 +426,6 @@
         </div>
     </section>
     <!--END TESTIMONIAL-->
-
-    <!--START GET STARTED-->
-    <section class="section section-lg bg-get-start">
-        <div class="bg-overlay"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2 text-center">
-                    <h1 class="get-started-title text-white">Let's Get Started</h1>
-                    <div class="section-title-border mt-4 bg-white"></div>
-                    <p class="section-subtitle font-secondary text-white text-center pt-4">Far far away, behind the word
-                        mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <a href="#" class="btn btn-light waves-effect mt-4">Get Started <i class="mdi mdi-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--END GET STARTED-->
 
     <!-- START BLOG -->
     <section class="section " id="blog">
@@ -691,8 +571,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 mt-4">
-                    <a class="footer-logo text-uppercase" href="#">
-                        <i class="mdi mdi-alien"></i>Hiric
+                    <a class="footer-logo text-uppercase" href="#">Orion Aerospace Dynamics
+                        <i class="mdi mdi-alien"></i>
                     </a>
                     <div class="text-muted mt-4">
                         <ul class="list-unstyled footer-list">
@@ -724,17 +604,6 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 mt-4">
-                    <h4>Subscribe</h4>
-                    <div class="mt-4">
-                        <p>In an ideal world this text wouldn’t exist, a client would acknowledge the importance of
-                            having web copy before the design starts.</p>
-                    </div>
-                    <form class="form subscribe">
-                        <input placeholder="Email" class="form-control text-white" required>
-                        <a href="#" class="submit"><i class="pe-7s-paper-plane"></i></a>
-                    </form>
-                </div>
             </div>
         </div>
     </footer>
@@ -749,7 +618,7 @@
                         <p class="copy-rights  mb-3 mb-sm-0">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Hiric - Themesbrand
+                            </script> © Orion Aerospace Dynamics
                         </p>
                     </div>
                     <div class="float-sm-end pull-none copyright">
