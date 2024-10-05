@@ -8,6 +8,10 @@ include 'lib/read_plain_text.php';
 $awards = readAwards('data/awards.csv');
 $team = readTeam ('data/team.csv');
 
+//Read products data from JSON
+$products = readProducts('data/products.json');
+
+
 ?>
 
 
@@ -177,67 +181,39 @@ $team = readTeam ('data/team.csv');
     <!--END FEATURES-->
 
     <!--START SERVICES-->
-    <section class="section bg-light " id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 offset-lg-2">
-                    <h1 class="section-title text-center">Our Services</h1>
-                    <div class="section-title-border mt-3"></div>
-                    <p class="section-subtitle text-muted text-center pt-4 font-secondary">Orion Aerospace Dynamics, headquartered in Denver, Colorado,
-                         is at the forefront of aerospace innovation, offering products that push the boundaries of space exploration, sustainable aviation, and immersive aerospace training.</p>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-diamond text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Galactic Cruiser™</h4>
-                                <p class="pt-2 text-muted">A spacecraft designed for deep space exploration, featuring Stellar Drive Propulsion for high-speed travel and Holodeck Entertainment for immersive, VR-based experiences.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-display2 text-primary"></i>
-                            <div class="ms-4">
-                                <h4>SkySailor Drones™</h4>
-                                <p class="pt-2 text-muted">Environmentally-friendly drones powered by solar and wind energy, equipped with Eco-Cam Tech for ecosystem monitoring and Infinite Flight Mode for extended airborne time.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-piggy text-primary"></i>
-                            <div class="ms-4">
-                                <h4>Nebula Stations™</h4>
-                                <p class="pt-2 text-muted">Modular space habitats designed for research and tourism, with Bio-Dome Agriculture for fresh produce growth in space and Gravity Pods for variable gravity simulation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mt-4">
-                    <div class="services-box">
-                        <div class="d-flex">
-                            <i class="pe-7s-science text-primary"></i>
-                            <div class="ms-4">
-                                <h4>AeroAcademy™</h4>
-                                <p class="pt-2 text-muted">An immersive training institution offering aerospace engineering, astronaut training, and space tourism programs, including Virtual Spacewalks and Intergalactic Culture Modules.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="section bg-light" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <h1 class="section-title text-center">Our Services</h1>
+                <div class="section-title-border mt-3"></div>
+                <p class="section-subtitle text-muted text-center pt-4 font-secondary">
+                    Orion Aerospace Dynamics, headquartered in Denver, Colorado, is at the forefront of aerospace innovation, offering products that push the boundaries of space exploration, sustainable aviation, and immersive aerospace training.
+                </p>
             </div>
         </div>
+        <div class="row mt-5">
+            <?php foreach ($products as $product): ?>
+                <div class="col-lg-4 mt-4">
+                    <div class="services-box">
+                        <div class="d-flex">
+                            <div class="ms-4">
+                                <h4><?php echo htmlspecialchars($product['name']); ?></h4>
+                                <p class="pt-2 text-muted"><?php echo htmlspecialchars($product['description']); ?></p>
+                                <ul>
+                                    <?php foreach ($product['applications'] as $application): ?>
+                                        <li class="pt-2 text-muted"><?php echo htmlspecialchars($application); ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
     </section>
+
     <!--START SERVICES-->
 
     <!--START AWARDS-->
