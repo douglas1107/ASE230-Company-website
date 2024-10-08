@@ -8,9 +8,13 @@ include 'lib/read_plain_text.php';
 $awards = readAwards('data/awards.csv');
 $team = readTeam ('data/team.csv');
 
-//Read products data from JSON
+//Read JSON
 $products = readProducts('data/products.json');
 
+$overview = readPlainTxt('data/overview.txt');
+$mission_statement = readPlainTxt('data/mission_statement.txt');
+$overview = implode("\n", $overview);
+$mission_statement = implode("\n", $mission_statement);
 
 ?>
 
@@ -95,7 +99,7 @@ $products = readProducts('data/products.json');
                     <h4 class="home-small-title">The Sky is Not the Limit</h4>
                     <h1 class="home-title">Orion Aerospace Dynamics</h1>
                     <p class="pt-3 home-desc mx-auto">Pushing the boundaries of human reach, making the vast expanse of space a familiar terrain,
-                         and ensuring Earth's skies are traveled sustainably.</p>
+                    and ensuring Earth's skies are traveled sustainably.</p>
                     <p class="play-shadow mt-4" data-bs-toggle="modal" data-bs-target="#watchvideomodal"><a
                             href="javascript: void(0);" class="play-btn video-play-icon"><i
                                 class="mdi mdi-play text-center"></i></a></p>
@@ -158,9 +162,8 @@ $products = readProducts('data/products.json');
                 <div class="col-lg-5 order-2 order-lg-1">
                     <div class="features-box mt-5 mt-lg-0">
                         <h3>About Orion Aerospace Dynamicse</h3>
-                        <p class="text-muted web-desc">Founded in 2021, Orion Aerospace Dynamics has quickly emerged as a leader in both space exploration and aviation technology. With innovative
-                             products like the Galactic Cruiser™ and SkySailor Drones™, Orion is redefining what’s possible in the aerospace industry.</p>
-                        <p class="text-muted">Our mission: "To push the boundaries of human reach, making the vast expanse of space a familiar terrain and ensuring Earth's skies are traveled sustainably."</p>
+                        <p class="text-muted web-desc"><?php echo $overview; ?></p>
+                        <p class="text-muted"><?php echo $mission_statement; ?></p>
                         <ul class="text-muted list-unstyled mt-4 features-item-list">
                             <li class="">Galactic Cruiser™ for deep space exploration.</li>
                             <li class="">SkySailor Drones™ for sustainable aerial surveillance.</li>
@@ -278,7 +281,7 @@ $products = readProducts('data/products.json');
                 <div class="col-lg-4">
                     <div class="text-center pricing-box">
                         <h4 class="text-uppercase">Galactic Cruiser™</h4>
-                        <h1>$500M+0</h1>
+                        <h1>$500M</h1>
                         <h6 class="text-uppercase text-muted">Per Mission</h6>
                         <div class="plan-features mt-5">
                             <p>Propulsion: <b class="text-primary">Stellar Drive</b></p>
@@ -287,37 +290,6 @@ $products = readProducts('data/products.json');
                             <p><b class="text-primary">Interplanetary Travel</b></p>
                         </div>
                         <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Book a Mission</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-center pricing-box price-active">
-                        <div class="ribbon-box"><span>Popular</span></div>
-                        <h4 class="text-uppercase">Deluxe</h4>
-                        <h1>$19.90</h1>
-                        <h6 class="text-uppercase text-muted">Billing Per Month</h6>
-                        <div class="plan-features mt-5">
-                            <p>Bandwidth: <b class="text-primary">10GB</b></p>
-                            <p>Onlinespace: <b class="text-primary">500MB</b></p>
-                            <p>Support: <b class="text-primary">Yes</b></p>
-                            <p><b class="text-primary">10</b> Domain</p>
-                            <p><b class="text-primary">No</b> Hidden Fees</p>
-                        </div>
-                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Join Now</a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-center pricing-box">
-                        <h4 class="text-uppercase">Ultimate</h4>
-                        <h1>$29.90</h1>
-                        <h6 class="text-uppercase text-muted">Billing Per Month</h6>
-                        <div class="plan-features mt-5">
-                            <p>Bandwidth: <b class="text-primary">100GB</b></p>
-                            <p>Onlinespace: <b class="text-primary">2 GB</b></p>
-                            <p>Support: <b class="text-primary">Yes</b></p>
-                            <p><b class="text-primary">Unlimited</b> Domain</p>
-                            <p><b class="text-primary">No</b> Hidden Fees</p>
-                        </div>
-                        <a href="#" class="btn btn-primary waves-effect waves-light mt-5">Join Now</a>
                     </div>
                 </div>
             </div>
