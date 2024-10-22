@@ -31,6 +31,20 @@
                 "Virtual Spacewalks: Training sessions in VR that prepare astronauts for extravehicular activities.",
                 "Intergalactic Culture Modules: Courses that introduce students to the speculated cultures and societal structures of potential extraterrestrial civilizations."
             ]
+        },
+        {
+            "name": "Product",
+            "description": "Product",
+            "applications": [
+                "Useful"
+            ]
+        },
+        {
+            "name": "Product",
+            "description": "Product",
+            "applications": [
+                "Useful"
+            ]
         }
     ]
 }
