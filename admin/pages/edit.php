@@ -25,7 +25,7 @@ if ($_POST) {
     }
 }
 ?>
-
+ 
 <form method="POST">
     <label for="content">Edit Content:</label><br>
     <textarea name="content" id="content" required><?php echo implode("\n", $content); ?></textarea><br><br>

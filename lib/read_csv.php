@@ -18,7 +18,7 @@ function readAwards($filename) {
     }
     return $awards;
 }
-
+ 
 function readTeam($filename) {
     $team = [];
     if (($handle = fopen($filename, 'r')) !== false) {
