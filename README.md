@@ -1,19 +1,18 @@
+### Assignment 6
 ## Douglas Broughton
-- Created the csv files and functions to read csv data
-- managed repository
-- edited the index.php to display correct company info
+- Created admin folders and files and managed repo
+- worked on files in team and products folders
+- built index admin dashboard
 
 ## Sean Cancel
-- Edit the read_plain_text inside the folder 
-- Make the function to read the data
-- Then call the function to read data in index.php
+- worked on files in pages folder
+- added readContacts function to read_csv
 
 ## Camden Bohanan
-- worked the read_plain_text function
-- helped put data into files
+- worked on files in contacts folder
+- helped to test debug
 
 
 ## Mith Sah
-- Edit the read_json inside the folder
-- Make the function to read the data
-- Then call the function to read product data in index.php
+- worked on files in awards folder
+- helped to test debug

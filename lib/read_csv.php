@@ -35,3 +35,25 @@ function readTeam($filename) {
     }
     return $team;
 }
+
+function readContacts($filename) {
+    if (!file_exists($filename) || !is_readable($filename)) {
+        return [];
+    }
+
+    $awards = [];
+    if (($handle = fopen($filename, 'r')) !== false) {
+        fgetcsv($handle);
+        
+        while (($data = fgetcsv($handle)) !== false) {
+            $awards[] = [
+                'name' => $data[0],
+                'email' => $data[1],
+                'phone' => $data[2],
+                'message' => $data[3]
+            ];
+        }
+        fclose($handle);
+    }
+    return $awards;
+}

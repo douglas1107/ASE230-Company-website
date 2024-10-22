@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'description' => $_POST['description'] ?? '',
         'applications' => !empty($_POST['applications']) ? explode("\n", trim($_POST['applications'])) : []
     ];
-    $products_data['products'][$id] = $updated_product;
-
-    if (file_put_contents($filepath, json_encode($products_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE))) {
+    $products_data[$id] = $updated_product;
+    $all_products = ['products' => $products_data];
+    if (file_put_contents($filepath, json_encode($all_products, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE))) {
         header('Location: index.php');
         exit;
     } else {

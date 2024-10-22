@@ -24,4 +24,6 @@ foreach ($team_members as $index => $member) {
 
 echo "</table>";
 echo "<a href='create.php'>Add New Team Member</a>";
+echo "<br></br>";
+echo "<a href = '../index.php'>Back to Dashboard</a>";
 ?>

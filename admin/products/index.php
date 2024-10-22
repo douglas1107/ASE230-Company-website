@@ -26,4 +26,6 @@ foreach ($products as $index => $product) {
 }
 echo "</table>";
 echo "<a href='create.php'>Add New Product</a>";
+echo "<br></br>";
+echo "<a href = '../index.php'>Back to Dashboard</a>";
 ?>

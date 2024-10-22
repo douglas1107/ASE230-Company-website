@@ -20,4 +20,6 @@ foreach ($awards as $index => $award) {
 
 echo "</table>";
 echo "<a href='create.php'>Add New Award</a>";
+echo "<br></br>";
+echo "<a href = '../index.php'>Back to Dashboard</a>";
 ?>
