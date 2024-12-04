@@ -9,6 +9,7 @@ echo "<h2>Contact Requests</h2>";
 echo "<table>";
 echo "<tr><th>Name</th><th>Email</th><th>Phone</th><th>Message</th></tr>";
 
+
 foreach ($contacts as $id => $contact) {
     echo "<tr>";
     echo "<td>" . htmlspecialchars($contact['name']) . "</td>";
@@ -18,6 +19,7 @@ foreach ($contacts as $id => $contact) {
     echo "<td><a href='detail.php?id=$id'>View</a></td>";
     echo "</tr>";
 }
+
 
 echo "</table>";
 echo "<br></br>";
